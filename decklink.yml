@@ -36,14 +36,17 @@ TRANSLATOR:
   Rules:
     global:
       # - {transform: lower}
-      - {transform: export}
-    # const:
-    #   - {action: accept, from: "^OV_"}
-    #   - {action: replace, from: "^ov_", to: _}
+      - {action: accept, from: "^BMD"}
+      - {action: accept, from: "^IDeck"}
+      - {action: accept, from: "^Create"}
+    const:
+      - {action: accept}
+    function:
+      - {action: accept}
     type:
       - {action: replace}
     private:
       - {transform: unexport}
-    post-global:
-      - {action: replace, from: _$}
+    # post-global:
+    #   - {action: replace, from: _$}
 
